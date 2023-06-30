@@ -2,7 +2,9 @@ package com.example.aboutme;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.aboutme.databinding.ActivityMainBinding;
 
@@ -19,5 +21,24 @@ public class MainActivity extends AppCompatActivity {
 
         // Llamado al método para genetat la vista usando view binding.
         setContentView(binding.getRoot());
+
+        // Llamado al método para inicializar botón.
+        initListener();
+    }
+
+    // Creación de método para dar funcionalidad al botón.
+    private void initListener() {
+
+        // Enlace del botón del diseño mediante view binding.
+        binding.goToSecondActivityButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                // Creación de una instancia de la clase Intent de tipo explícito para enlazar con segunda activity.
+                Intent explicitIntent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(explicitIntent);
+            }
+        });
     }
 }
