@@ -38,7 +38,7 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Llamado al método para enviar correo electrónico.
-                goToUrl("http://www.google.cl");
+                goToUrl("https://www.linkedin.com/in/son-goku-a1253883/");
             }
         });
 
@@ -49,7 +49,7 @@ public class SecondActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 // Llamado al método para enviar correo electrónico.
-                composeEmail("cavilest@gmail.com", "Holi, que ondi");
+                composeEmail("songoku@capsulecorp.com", "Holi, que ondi", "GOKUUUUUUU!");
             }
         });
 
@@ -62,21 +62,33 @@ public class SecondActivity extends AppCompatActivity {
                 openWhatsapp();
             }
         });
-
     }
 
     // Creación de método con intent implícito para ir a la URL del perfil.
     public void goToUrl(String address) {
         Intent implicitIntentUrl = new Intent(Intent.ACTION_VIEW,
-                Uri.parse("http://www.google.cl"));
+                Uri.parse(address));
         startActivity(implicitIntentUrl);
     }
     // Creación de método con intent implícito para enviar correo electrónico.
-    public void composeEmail(String addresses, String subject) {
+    public void composeEmail(String address, String subject, String body) {
+
+        // Creación de una instancia de Intent con acción de enviar correo.
         Intent implicitIntentEmail = new Intent(Intent.ACTION_SENDTO);
+
+        // Se asigna el dato de dirección a una aplicación de correo.
         implicitIntentEmail.setData(Uri.parse("mailto:"));
-        implicitIntentEmail.putExtra(Intent.EXTRA_EMAIL, addresses);
+
+        // Se asigna el dato de dirección en caso de no haber aplicación.
+        implicitIntentEmail.putExtra(Intent.EXTRA_EMAIL, address);
+
+        // Se asigna un asunto al correo que se enviará.
         implicitIntentEmail.putExtra(Intent.EXTRA_SUBJECT, subject);
+
+        // Se asigna un cuerpo al correo que se enviará.
+        implicitIntentEmail.putExtra(Intent.EXTRA_TEXT, body);
+
+        // Si existe alguna aplicación para resolver el intent, este se ejecuta.
         if (implicitIntentEmail.resolveActivity(getPackageManager()) != null) {
             startActivity(implicitIntentEmail);
         }
@@ -84,7 +96,7 @@ public class SecondActivity extends AppCompatActivity {
 
     // Creación de método con intent implícito para enviar mensaje por Whatsapp.
     public void openWhatsapp() {
-        String contact = "+56995435740";
+        String contact = "+819856545896";
         String url = "https://api.whatsapp.com/send?phone="+ contact +"&text= Holi, que ondi";
         Intent implicitIntentWhatsapp = new Intent(Intent.ACTION_VIEW);
         implicitIntentWhatsapp.setData(Uri.parse(url));
