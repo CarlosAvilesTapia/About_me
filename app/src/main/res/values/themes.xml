@@ -3,6 +3,7 @@
     <style name="Base.Theme.AboutMe" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">#FF5506</item>
     </style>
 
     <style name="Theme.AboutMe" parent="Base.Theme.AboutMe" />
