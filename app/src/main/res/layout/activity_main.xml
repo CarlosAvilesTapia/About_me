@@ -9,30 +9,32 @@
 
     <TextView
         android:id="@+id/textView2"
+        style="@style/dragon_ball_letter"
         android:layout_width="259dp"
         android:layout_height="207dp"
-        android:fontFamily="@font/shojumaru"
-        android:text="¡Hola, soy Goku! Presiona mi nombre..."
-        android:textColor="#041553"
+        android:text="@string/hola_soy_goku_presiona_mi_nombre"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintHorizontal_bias="0.269"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.068" />
+        app:layout_constraintVertical_bias="0.068"
+        tools:ignore="TextContrastCheck,TextSizeCheck" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="209dp"
-        android:layout_height="171dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/baseline_arrow_drop_down_24" />
+        app:layout_constraintVertical_bias="0.055"
+        app:srcCompat="@drawable/baseline_arrow_drop_down_128"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/arrow" />
 
     <ImageView
         android:id="@+id/contactButton"
@@ -44,10 +46,10 @@
         android:contentDescription="@string/contact"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
-        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintHorizontal_bias="0.205"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toTopOf="@+id/guideline7"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.022"
         app:srcCompat="@drawable/kanji" />
 
     <androidx.constraintlayout.widget.Guideline

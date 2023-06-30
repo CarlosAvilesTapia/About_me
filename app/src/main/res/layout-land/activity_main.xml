@@ -9,28 +9,27 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="263dp"
-        android:layout_height="357dp"
+        style="@style/dragon_ball_letter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:fontFamily="@font/shojumaru"
-        android:text="Soy el defensor de la Tierra y me encanta comer... Presiona mi nombre..."
-        android:textColor="#041553"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/soy_el_defensor_de_la_tierra_y_me_encanta_comer_presiona_mi_nombre"
+        android:textSize="29sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        app:layout_constraintVertical_bias="0.536" />
 
     <ImageView
         android:id="@+id/contactButton"
         android:layout_width="181dp"
         android:layout_height="240dp"
-        android:layout_marginEnd="200dp"
         android:layout_marginBottom="44dp"
         android:adjustViewBounds="true"
         android:contentDescription="@string/contact"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
-        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
         app:srcCompat="@drawable/kanji" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -38,14 +37,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05" />
+        app:layout_constraintGuide_percent="0.02" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.95" />
+        app:layout_constraintGuide_percent="0.4" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline7"

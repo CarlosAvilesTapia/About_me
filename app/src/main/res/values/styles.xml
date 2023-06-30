@@ -8,4 +8,11 @@
         <item name="android:fontFamily">@font/shojumaru</item>
         <item name="android:textSize">29sp</item>
     </style>
+
+    <style name="dragon_ball_letter">
+        <item name="android:background">#8F020312</item>
+        <item name="android:fontFamily">@font/shojumaru</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#FF5506</item>
+    </style>
 </resources>
