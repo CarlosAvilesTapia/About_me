@@ -49,7 +49,7 @@ public class SecondActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 // Llamado al método para enviar correo electrónico.
-                composeEmail("songoku@capsulecorp.com", "Holi, que ondi", "GOKUUUUUUU!");
+                composeEmail(new String[]{"songoku@capsulecorp.com"}, "Holi, que ondi", "GOKUUUUUUU!");
             }
         });
 
@@ -71,7 +71,7 @@ public class SecondActivity extends AppCompatActivity {
         startActivity(implicitIntentUrl);
     }
     // Creación de método con intent implícito para enviar correo electrónico.
-    public void composeEmail(String address, String subject, String body) {
+    public void composeEmail(String[] address, String subject, String body) {
 
         // Creación de una instancia de Intent con acción de enviar correo.
         Intent implicitIntentEmail = new Intent(Intent.ACTION_SENDTO);
