@@ -89,9 +89,7 @@ public class SecondActivity extends AppCompatActivity {
         implicitIntentEmail.putExtra(Intent.EXTRA_TEXT, body);
 
         // Si existe alguna aplicación para resolver el intent, este se ejecuta.
-        if (implicitIntentEmail.resolveActivity(getPackageManager()) != null) {
-            startActivity(implicitIntentEmail);
-        }
+        startActivity(implicitIntentEmail);
     }
 
     // Creación de método con intent implícito para enviar mensaje por Whatsapp.
